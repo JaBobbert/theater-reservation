@@ -20,8 +20,8 @@ public class theaterReservation {
         LocalDate userdate = LocalDate.parse(date, format);
 
         int spaceIndex = fullName.indexOf(' ');
-        String firstName = fullName.substring(0, spaceIndex);
-        String lastName = fullName.substring(spaceIndex + 1);
+        String firstName = fullName.substring(0, spaceIndex).trim();
+        String lastName = fullName.substring(spaceIndex + 1).trim();
 
         if ( ticket > 1){
             System.out.println(tickets + " tickets reserved for " + userdate + " under " + lastName + ", " + firstName);
